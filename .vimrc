@@ -31,10 +31,10 @@ if dein#load_state('/home/keigo/.vim/dein/')
   call dein#add('/home/keigo/.vim/dein//repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('justmao945/vim-clang')
-  call dein#add('Shougo/vimproc.vim')
   call dein#add('Shougo/neomru.vim')
 
   " You can specify revision/branch/tag.
