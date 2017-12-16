@@ -4,10 +4,6 @@ set number
 " 検索時に大文字小文字を区別しない
 set ignorecase
 
-" teratermからカラー表示
-set term=builtin_linux
-set ttytype=builtin_linux
-
 " カラースキーマ
 colorscheme darkblue
 syntax on
@@ -20,22 +16,22 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/keigo/.vim/dein//repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/dein//repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/home/keigo/.vim/dein/')
-  call dein#begin('/home/keigo/.vim/dein/')
+if dein#load_state('~/.vim/dein/')
+  call dein#begin('~/.vim/dein/')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/home/keigo/.vim/dein//repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/unite.vim')
-  call dein#add('justmao945/vim-clang')
   call dein#add('Shougo/neomru.vim')
+  call dein#add('justmao945/vim-clang')
 
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
