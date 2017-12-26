@@ -1,12 +1,22 @@
 " 行番号表示
 set number
 
+" タブ幅
+set tabstop=4
+
+" 不可視文字の可視化
+set list
+set listchars=tab:>-
+
+" 折り返し
+set nowrap
+
 " 検索時に大文字小文字を区別しない
 set ignorecase
 
 " カラースキーマ
-colorscheme darkblue
-syntax on
+"colorscheme darkblue
+"syntax on
 
 
 " プラグインはdein.vimで管理する
@@ -31,7 +41,9 @@ if dein#load_state('~/.vim/dein/')
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neomru.vim')
+
   call dein#add('justmao945/vim-clang')
+  call dein#add('vim-scripts/Conque-GDB')
 
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
