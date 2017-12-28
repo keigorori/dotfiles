@@ -19,6 +19,12 @@ set ignorecase
 "syntax on
 
 
+
+" Keymap
+" Unite
+nnoremap <silent> <C-p>		:<C-u>Unite file_rec/async<CR>
+
+
 " プラグインはdein.vimで管理する
 "dein Scripts-----------------------------
 if &compatible
