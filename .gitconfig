@@ -1,0 +1,7 @@
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	logg = log --graph --oneline --decorate
+	diffc = diff --cached
+	commit = commit -v
