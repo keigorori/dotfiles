@@ -7,3 +7,5 @@
 	logg = log --graph --oneline --decorate
 	diffc = diff --cached
 	commit = commit -v
+[core]
+	excludesfile = C:/Users/keigo/.gitignore
