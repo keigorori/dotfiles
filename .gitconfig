@@ -1,4 +1,4 @@
-[include]
+﻿[include]
 	path=~/.gitconfig.local
 [alias]
 	st = status

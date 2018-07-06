@@ -1,4 +1,4 @@
-# 基本的にLFで。windows用のものだけCRLFに設定する
+﻿# 基本的にLFで。windows用のものだけCRLFに設定する
 *           text eol=lf
 
 # windows
