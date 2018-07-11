@@ -5,7 +5,8 @@
 	co = checkout
 	br = branch
 	logg = log --graph --oneline --decorate
+	logn = log --name-status
 	diffc = diff --cached
-	commit = commit -v
+	cm = commit -v
 [core]
 	excludesfile = C:/Users/keigo/.gitignore
