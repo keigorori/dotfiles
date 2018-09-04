@@ -1,0 +1,7 @@
+" clipboard使用する
+set clipboard=unnamed,autoselect
+
+" 検索はignorecase + smartcase
+set ignorecase
+set smartcase
+
