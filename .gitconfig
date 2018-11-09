@@ -9,4 +9,4 @@
 	diffc = diff --cached
 	cm = commit -v
 [core]
-	excludesfile = C:/Users/keigo/.gitignore
+	excludesfile =~/.gitignore
