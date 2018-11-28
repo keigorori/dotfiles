@@ -5,3 +5,7 @@ set clipboard=unnamed,autoselect
 set ignorecase
 set smartcase
 
+" keymap
+noremap PP "0p
+vnoremap > >gv
+vnoremap < <gv
