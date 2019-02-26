@@ -1,6 +1,6 @@
-﻿# .bashrc
+#.bashrc
 
-# OS
+#OS
 if [ "$(uname)" == 'Darwin' ]; then
   OS='Mac'
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
@@ -12,10 +12,10 @@ else
   exit 1
 fi
 
-# locale
+#locale
 export LANG=en_US.UTF-8
 
-# Git
+#Git
 if [ "$OS" = 'Mac' ]; then
     source /usr/local/etc/bash_completion.d/git-prompt.sh
     source /usr/local/etc/bash_completion.d/git-completion.bash
