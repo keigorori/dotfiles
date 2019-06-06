@@ -9,3 +9,5 @@ set smartcase
 noremap PP "0p
 vnoremap > >gv
 vnoremap < <gv
+noremap <C-j> <esc>
+noremap! <C-j> <esc>
