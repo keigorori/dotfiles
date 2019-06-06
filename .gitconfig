@@ -10,3 +10,7 @@
 	cm = commit -v
 [core]
 	excludesfile =~/.gitignore
+[merge]
+	ff = false
+[pull]
+	ff = only
