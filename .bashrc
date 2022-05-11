@@ -1,6 +1,6 @@
 #.bashrc
 
-#OS
+# OS
 if [ "$(uname)" == 'Darwin' ]; then
   OS='Mac'
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
@@ -12,14 +12,23 @@ else
   exit 1
 fi
 
-#locale
+# locale
 export LANG=en_US.UTF-8
 
-#Git
+# Git
 if [ "$OS" = 'Mac' ]; then
-    source /usr/local/etc/bash_completion.d/git-prompt.sh
-    source /usr/local/etc/bash_completion.d/git-completion.bash
+    GIT_COMPLETION="/usr/local/etc/bash_completion.d/git-completion.bash"
+    GIT_PROMPT="/usr/local/etc/bash_completion.d/git-prompt.sh"
+elif [ "$OS" = 'Linux' ]; then
+    GIT_COMPLETION="$HOME/.git-completion.bash"
+    GIT_PROMPT="$HOME/.git-prompt.sh"
+fi
 
+if [ -f ${GIT_COMPLETION} ]; then
+    source ${GIT_COMPLETION}
+fi
+if [ -f ${GIT_PROMPT} ]; then
+    source ${GIT_PROMPT}
+    export PS1='\[\e[32m\]\u@\h\[\e[00m\]:\[\e[34m\]\w\[\e[31m\]$(__git_ps1)\[\e[00m\]\n\$ '
     GIT_PS1_SHOWDIRTYSTATE=true
-    export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 fi
