@@ -4,7 +4,7 @@
 	st = status
 	co = checkout
 	br = branch
-	logg = log --graph --oneline --decorate
+	logg = log --graph --oneline --decorate --date-order
 	logn = log --name-status
 	diffc = diff --cached
 	cm = commit -v
