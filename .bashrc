@@ -2,14 +2,14 @@
 
 # OS
 if [ "$(uname)" == 'Darwin' ]; then
-  OS='Mac'
+    OS='Mac'
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
-  OS='Linux'
+    OS='Linux'
 elif [ "$(expr substr $(uname -s) 1 5)" == 'MINGW' ]; then
-  OS='Windows'
+    OS='Windows'
 else
-  echo "Your platform ($(uname -a)) is not supported."
-  exit 1
+    echo "Your platform ($(uname -a)) is not supported."
+    exit 1
 fi
 
 # locale
@@ -24,10 +24,10 @@ elif [ "$OS" = 'Linux' ]; then
     GIT_PROMPT="$HOME/.git-prompt.sh"
 fi
 
-if [ -f ${GIT_COMPLETION} ]; then
+if [ -n "$GIT_COMPLETION" ] && [ -f ${GIT_COMPLETION} ]; then
     source ${GIT_COMPLETION}
 fi
-if [ -f ${GIT_PROMPT} ]; then
+if [ -n "$GIT_PROMPT" ] && [ -f ${GIT_PROMPT} ]; then
     source ${GIT_PROMPT}
     export PS1='\[\e[32m\]\u@\h\[\e[00m\]:\[\e[34m\]\w\[\e[31m\]$(__git_ps1)\[\e[00m\]\n\$ '
     GIT_PS1_SHOWDIRTYSTATE=true
