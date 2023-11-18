@@ -24,4 +24,7 @@ $ cd ~/dotfiles
 $ git config --local user.email local@email
 $ git config --local user.name username
 ```
-
+5. Set remote URL.
+```
+$ git remote set-url origin https://keigorori@github.com/keigorori/dotfiles.git
+```
