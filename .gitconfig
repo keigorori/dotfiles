@@ -3,7 +3,7 @@
 [alias]
 	st = status
 	co = checkout
-	br = branch
+	br = branch --sort=-authordate
 	logg = log --graph --oneline --decorate --date-order
 	logn = log --name-status
 	diffc = diff --cached
@@ -14,3 +14,8 @@
 	ff = false
 [pull]
 	ff = only
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
