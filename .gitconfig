@@ -8,6 +8,7 @@
 	logn = log --name-status
 	diffc = diff --cached
 	cm = commit -v
+	pull-f = !git fetch && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
 [core]
 	excludesfile =~/.gitignore
 [merge]
