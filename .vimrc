@@ -43,6 +43,7 @@ syntax enable
 nnoremap x "_x
 vnoremap x "_x
 " Ctrl+jでエスケープ
-inoremap <c-j> <esc>
-vnoremap <c-j> <esc>
-
+" inoremap <c-j> <esc>
+" vnoremap <c-j> <esc>
+" ヤンク後に終端位置に移動
+" xnoremap y y`>
