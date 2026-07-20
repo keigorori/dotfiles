@@ -28,3 +28,6 @@ fi
 
 ## uv
 . "$HOME/.local/bin/env"
+
+## mise
+eval "$(mise activate zsh)"
